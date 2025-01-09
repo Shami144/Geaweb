@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup with CAPTCHA</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="signup-container">
+            <h2>Signup</h2>
+            <form id="signupForm" action="/signup" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="cpf">CPF Number (8 digits):</label>
+                <input type="text" id="cpf" name="cpf" required placeholder="Enter your CPF" maxlength="8">
+
+                <label for="posting">Place of Posting:</label>
+                <input type="text" id="posting" name="posting" required placeholder="Enter your place of posting">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Create a password">
+
+                <!-- Google reCAPTCHA -->
+                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </main>
+    
+    <script src="signup.js"></script>
+</body>
+</html>
